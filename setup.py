@@ -14,9 +14,6 @@ with open('HISTORY.rst') as history_file:
 with open('requirements.txt') as reqs_file:
     reqs = reqs_file.readlines()
 
-with open('requirements_dev.txt') as devreqs_file:
-    dev_reqs = devreqs_file.readlines()
-    
 
 setup(
     author="Shaun Martin",
@@ -43,7 +40,7 @@ setup(
     keywords='fr2ics',
     name='fr2ics',
     packages=find_packages(include=['fr2ics']),
-    setup_requires=dev_reqs,
+    setup_requires=reqs,
     test_suite='test',
     url='https://github.com/inhumantsar/fr2ics',
     version='0.1.0',
